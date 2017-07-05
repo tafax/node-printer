@@ -34,7 +34,7 @@
     "module_name": "node_printer",
     "module_path": "./lib/",
     "host": "https://github.com/tafax/node-printer/releases/download/",
-    "remote_path": "{version}"
+    "remote_path": "v{version}"
   },
   "licenses": [
     {
