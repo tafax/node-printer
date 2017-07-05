@@ -13,24 +13,22 @@ clone_folder: c:\projects\node-printer
 # fix lineendings in Windows
 init:
   - git config --global core.autocrlf input
-  - git config --global user.name "Ion Lupascu"
-  - git config --global user.email ionlupascu@gmail.com
+  - git config --global user.name "Matteo Tafani Alunno"
+  - git config --global user.email mtafanialunno@vendini.com
 
 # what combinations to test
 environment:
   matrix:
     # Node.js
-    - nodejs_version: "0.10"
-    - nodejs_version: "0.12"
-    - nodejs_version: "4.4"
-    - nodejs_version: "5.8"
+    - nodejs_version: "6.5"
+      build_electron: "true"
     - nodejs_version: "6.9"
       build_electron: "true"
 
 matrix:
   fast_finish: true
   allow_failures:
-    - nodejs_version: "0.10"
+    - nodejs_version: "6.9"
 
 # Get the latest stable version of Node 0.STABLE.latest
 install:

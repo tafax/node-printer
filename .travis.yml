@@ -1,13 +1,11 @@
 env:
   matrix:
     - export NODE_VERSION="6.9"
-    - export NODE_VERSION="5.9"
-    - export NODE_VERSION="4.4"
-    - export NODE_VERSION="0.10"
+    - export NODE_VERSION="6.5"
 matrix:
   fast_finish: true
   allow_failures:
-    - env: NODE_VERSION="0.10"
+    - env: NODE_VERSION="6.9"
     - env: NODE_VERSION="iojs"
 before_install:
   - git clone https://github.com/creationix/nvm.git ./.nvm
@@ -26,8 +24,8 @@ before_install:
   - npm install -g node-gyp
   - BUILD_ONLY=true npm install --build-from-source
 before_script:
-  - git config --global user.name "Ion Lupascu"
-  - git config --global user.email ionlupascu@gmail.com
+  - git config --global user.name "Matteo Tafani Alunno"
+  - git config --global user.email mtafanialunno@vendini.com
 
 after_script:
   - node-pre-gyp configure
